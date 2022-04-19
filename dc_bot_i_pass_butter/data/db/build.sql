@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS tasks (
+    TaskID integer PRIMARY KEY 
+);
