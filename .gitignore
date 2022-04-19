@@ -2,3 +2,4 @@
 *.db-journal
 __pycache__
 dc_bot_i_pass_butter/lib/bot/token.0
+.DS_Store
