@@ -8,10 +8,10 @@ from ..db import db
 TOKEN_PATH = "./dc_bot_i_pass_butter/lib/bot/token.0"
 DC_BOT_PREFIX = '$'
 OWNER_ID = '291691766250471435'
-SERVER_ID = 826572526573322270
-INPUT_CHANNEL_ID = 965007985451630633
-OUTPUT_CHANNEL_ID = 965007985451630633
-USERS_IDS = [291691766250471435]
+SERVER_ID = 963084446419021854
+INPUT_CHANNEL_ID = 966092609980346439
+OUTPUT_CHANNEL_ID = 966092609980346439
+USERS_IDS = [291691766250471435, 271363338938744834, 301995089042079744, 352513475135668234]
 COGS = [path.split('/')[-1][:-3] for path in glob('./dc_bot_i_pass_butter/lib/cogs/*.py')]
 
 
@@ -89,7 +89,7 @@ class I_pass_butter(Bot):
             #     await sleep(0.5)
 
             self.ready = True
-            await self.stdin.send('What is my purpouse?')
+            await self.stdin.send('What is my purpose?')
             print('Bot ready.')
         else:
             print('Bot reconnected.')

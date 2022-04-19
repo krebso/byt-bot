@@ -1,8 +1,8 @@
 from os.path import isfile
 from sqlite3 import connect
 
-DB_PATH = "./data/db/database.db"
-BUILD_PATH = "./data/db/build.sql"
+DB_PATH = "./dc_bot_i_pass_butter/data/db/database.db"
+BUILD_PATH = "./dc_bot_i_pass_butter/data/db/build.sql"
 
 cxn = connect(DB_PATH, check_same_thread=False)
 cursor = cxn.cursor()
