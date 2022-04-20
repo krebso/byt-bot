@@ -11,7 +11,13 @@ OWNER_ID = '291691766250471435'
 SERVER_ID = 963084446419021854
 INPUT_CHANNEL_ID = 966092609980346439
 OUTPUT_CHANNEL_ID = 966092609980346439
-USERS_IDS = [291691766250471435, 271363338938744834, 301995089042079744, 352513475135668234]
+USERS_IDS = {
+    'Bruno' : 291691766250471435, 
+    'Martin' : 301995089042079744, 
+    'Stano' : 271363338938744834, 
+    'Marek' : 352513475135668234
+}
+
 COGS = [path.split('/')[-1][:-3] for path in glob('./dc_bot_i_pass_butter/lib/cogs/*.py')]
 
 
@@ -80,7 +86,7 @@ class I_pass_butter(Bot):
 
     async def on_ready(self):
         if not self.ready:
-            self.legit_users = [await self.fetch_user(user_id) for user_id in USERS_IDS]
+            self.legit_users = [await self.fetch_user(user_id) for user_id in USERS_IDS.values]
             self.guild = self.get_guild(SERVER_ID)
             self.stdout = self.get_channel(OUTPUT_CHANNEL_ID)
             self.stdin = self.get_channel(INPUT_CHANNEL_ID)
