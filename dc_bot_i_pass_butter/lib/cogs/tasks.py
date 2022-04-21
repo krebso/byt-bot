@@ -1,7 +1,7 @@
 from datetime import datetime
 from math import dist
 from dateparser import parse
-from dc_bot_i_pass_butter.lib.bot import USERS_IDS
+from lib.bot import USERS_IDS
 from lib.bot import bot
 from discord.ext.commands import Cog, command, Context
 from typing import Dict, List

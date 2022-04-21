@@ -86,13 +86,13 @@ class I_pass_butter(Bot):
 
     async def on_ready(self):
         if not self.ready:
-            self.legit_users = [await self.fetch_user(user_id) for user_id in USERS_IDS.values]
+            self.legit_users = [await self.fetch_user(user_id) for user_id in USERS_IDS.values()]
             self.guild = self.get_guild(SERVER_ID)
             self.stdout = self.get_channel(OUTPUT_CHANNEL_ID)
             self.stdin = self.get_channel(INPUT_CHANNEL_ID)
 
-            # while not self.cogs_ready.all_ready():
-            #     await sleep(0.5)
+            while not self.cogs_ready.all_ready():
+                await sleep(0.5)
 
             self.ready = True
             await self.stdin.send('What is my purpose?')
