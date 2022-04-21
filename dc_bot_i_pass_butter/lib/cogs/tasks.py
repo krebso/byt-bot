@@ -83,7 +83,7 @@ class Tasks(Cog):
                 
     
     @command(name="cancel_task")
-    async def cancel_task(self, ctx: Context, task_id: int):
+    async def cancel_task(self, ctx: Context ):
         # TODO:
         # cancel scheduled job
         task_info = bot.scheduler.get_job(task_id).name
