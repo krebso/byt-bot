@@ -7,6 +7,8 @@ from discord.ext.commands import Cog, command, Context
 from typing import Dict, List
 from apscheduler.triggers.cron import CronTrigger
 
+from random import choice
+
 # Repeated task params:
 #   id={string}
 #   start={YYYY/MM/DD} (ISO 8601)
@@ -88,6 +90,15 @@ class Tasks(Cog):
         bot.scheduler.remove_job(task_id)
         # delete task from database
         await bot.stdout.send('Job with id : ', task_id, ' | task_info :', task_info, ' was removed.')
+    
+    @command(name="ahoj")
+    async def say_hello(self, ctx: Context, task_id: int):
+        POZDRAV = [
+            "Choď dopiče ty žochár vyjebaný",
+            "Rumpel kokotský nehaj ma spať",
+            "MRAVCE CHODIA PO BYTE, DOPIČEEE"
+            ]
+        await bot.stdout.send( choice( POZDRAV ) )
     
 def setup(bot):
     bot.add_cog(Tasks(bot))
