@@ -83,7 +83,7 @@ class Tasks(Cog):
                 
     
     @command(name="cancel_task")
-    async def cancel_task(self, ctx: Context ):
+    async def cancel_task(self, ctx: Context, task_id: int):
         # TODO:
         # cancel scheduled job
         task_info = bot.scheduler.get_job(task_id).name
@@ -92,7 +92,7 @@ class Tasks(Cog):
         await bot.stdout.send('Job with id : ', task_id, ' | task_info :', task_info, ' was removed.')
     
     @command(name="ahoj")
-    async def say_hello(self, ctx: Context, task_id: int):
+    async def say_hello(self, ctx: Context):
         POZDRAV = [
             "Choď dopiče ty žochár vyjebaný",
             "Rumpel kokotský nehaj ma spať",
