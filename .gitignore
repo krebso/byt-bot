@@ -1,4 +1,5 @@
 *
 
-!*.py
-!*/*.py
+!.gitignore
+!melisko/*.py
+!melisko/*/*.py
