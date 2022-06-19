@@ -1,7 +1,4 @@
-*.db
-*.db-journal
-__pycache__
-melisko/token0
-.DS_Store
-.python-version
-.idea
+*
+
+!*.py
+!*/*.py
